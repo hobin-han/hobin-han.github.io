@@ -1,0 +1,64 @@
+/* Minimal, clean base styles for a personal site */
+:root {
+  --bg: #0b0d12;
+  --fg: #e7ecf3;
+  --muted: #a7b0bd;
+  --card: #131722;
+  --brand: #7aa2f7;
+  --accent: #89dceb;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+.site-header { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-weight: 700; font-size: 18px; color: var(--fg); }
+.nav a { margin-left: 16px; color: var(--muted); }
+.nav a.active, .nav a:hover { color: var(--fg); }
+
+.hero { padding: 60px 0 24px; }
+.hero h1 { font-size: 40px; margin: 0 0 8px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 32px 0 60px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #0b0d12;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--brand);
+  color: var(--fg);
+}
+
+.site-footer { border-top: 1px solid rgba(255,255,255,0.06); }
+.prose h1, .prose h2, .prose h3 { margin-top: 24px; }
