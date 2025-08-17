@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const year = new Date().getFullYear();
   document.querySelectorAll('#year').forEach(el => el.textContent = year);
-  console.log("ℹ️ Footer year 업데이트 완료");
 
   // Leaflet map init
-  const map = L.map('map').setView([42, 64], 2);
+  const map = L.map('map', { scrollWheelZoom: false }).setView([42, 64], 2);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
