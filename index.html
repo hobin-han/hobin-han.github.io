@@ -13,11 +13,13 @@
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/css/styles.css">
-  <script defer src="/js/main.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header container">
-    <a class="logo" href="/">👩🏻‍💻 hobin</a>
+    <a class="logo" href="/">👩🏻‍💻 hobin-han</a>
     <!-- <nav class="nav">
       <a href="/">Home</a>
     </nav> -->
@@ -29,22 +31,46 @@
       <p>I build iOS apps (KakaoWebtoon, KakaoPage, Tapas) and share what I learn.</p>
       <p class="cta-row">
         <a class="btn" href="mailto:hobin1019@gmail.com">@Contact me</a>
-        <a class="btn ghost" href="https://github.com/hobin-han" target="_blank" rel="noopener">GitHub</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/hobin1019" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/hobin-han" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+    <section class="prose">
+      <h1>Professional Experience</h1>
+
+      <h2>Kakao Entertainment <span class="role">— iOS Developer (2020 ~ Present)</span></h2>
+      <p>
+        Building and maintaining large-scale iOS apps (<strong>KakaoWebtoon</strong>, <strong>KakaoPage</strong>, <strong>Tapas</strong>) 
+        serving millions of monthly active users. Contributed to global launches in 4 countries with multilingual support.
+      </p>
+      <ul>
+        <li>Developed and shipped features that ranked #1 in the Comics category (App Store KR).</li>
+        <li>Refactored legacy React Native modules, fixing 1,000+ build errors and restoring compilation.</li>
+        <li>Optimized performance and memory usage for massive image & video content.</li>
+        <li>Initiated pair programming and better task breakdowns to ensure timely delivery.</li>
+      </ul>
+
+      <h2>FnGuide <span class="role">— Software Engineer (2016 ~ 2020)</span></h2>
+      <p>
+        Designed and built financial applications for internal use and enterprise clients, 
+        with focus on automation and reducing operational costs.
+      </p>
+      <ul>
+        <li>Implemented automation tools that reduced manual SMS sending costs by 100%.</li>
+        <li>Developed and maintained Objective-C and Swift applications with backend API integration.</li>
+      </ul>
+
+      <h1>Core Skills</h1>
+      <p>
+        Swift, SwiftUI, UIKit, Combine, Concurrency, AVFoundation (video/audio player development), 
+        App performance optimization, Clean architecture, Refactoring, Cross-team communication, Mentoring
       </p>
     </section>
 
     <section class="grid">
       <article class="card">
-        <h2>Recent Work</h2>
-        <ul>
-          <li><strong>SwiftAVPlayer</strong> — AVFoundation sample player with clean structure.</li>
-          <li><strong>Combine Deep Dive</strong> — Custom Publisher/Subscriber write-up.</li>
-        </ul>
-      </article>
-
-      <article class="card">
         <h2>Tech Blog (2025 ~)</h2>
+        <p>(written in English)</p>
         <a href="https://medium.com/@hobin1019" target="_blank" rel="noopener">Medium</a>
         <ul>
           <li><a href="https://medium.com/@hobin1019/make-your-own-publisher-subscription-subscriber-step-by-step-2087632c7f51">[Combine] Make Your Own Publisher, Subscription, Subscriber Step by Step</a></li>
@@ -52,13 +78,10 @@
           <li><a href="https://medium.com/@hobin1019/understanding-the-trait-collection-in-ios-and-the-issue-i-faced-with-a-solution-e4d2858d19e0">[Swift] Understanding the Trait Collection in iOS and the Issue I Faced with a Solution</a></li>
         </ul>
       </article>
-    </section>
 
-    <section>
-    <h1>Written in Korean</h1>
-    <div class="grid">
       <article class="card">
-        <h2>Tech Blog (2016 ~ 2024)</h2>
+        <h2>Tech Blog (2016 ~)</h2>
+        <p>(written in Korean)</p>
         <a href="https://blog.naver.com/hobin1019/222038369211" target="_blank" rel="noopener">Naver Blog</a> | <a href="https://red-cherry-ring.tistory.com/" target="_blank" rel="noopener">Tistory Blog</a>
         <ul>
           <li><a href="https://red-cherry-ring.tistory.com/32" target="_blank" rel="noopener">SwiftUI - Managing Model Data</a></li>
@@ -68,44 +91,43 @@
           <li><a href="https://blog.naver.com/hobin1019/221304268219" target="_blank" rel="noopener">Apple Developer Certificates</a></li>
         </ul>
       </article>
-      
-      <article class="card">
-        <h2>Travlog</h2>
-        <ul>
-          <li>
-            <img src="/assets/travel/2025-europe.jpg" alt="2025 Western Europe" style="width:100px; height:100px; object-fit:cover; border-radius:6px; vertical-align:middle; margin-right:8px;">
-            <a href="https://blog.naver.com/hobin1019/223914835167" target="_blank" rel="noopener">2025 - Western Europe</a>
-          </li>
-          <li>
-            <img src="/assets/travel/2024-japan.jpg" alt="2024 Japan" style="width:100px; height:100px; object-fit:cover; border-radius:6px; vertical-align:middle; margin-right:8px;">
-            2024 - Japan
-          </li>
-          <li>
-            <img src="/assets/travel/2024-taiwan.jpg" alt="2024 Taiwan" style="width:100px; height:100px; object-fit:cover; border-radius:6px; vertical-align:middle; margin-right:8px;">
-            <a href="https://blog.naver.com/hobin1019/223371049772" target="_blank" rel="noopener">2024 - Taiwan</a>
-          </li>
-          <li>
-            <img src="/assets/travel/2019-hongkong.jpg" alt="2019 HongKong" style="width:100px; height:100px; object-fit:cover; border-radius:6px; vertical-align:middle; margin-right:8px;">
-            <a href="https://blog.naver.com/hobin1019/221549852954" target="_blank" rel="noopener">2019 - HongKong</a>
-          </li>
-          <li>
-            <img src="/assets/travel/2018-vietnam.jpg" alt="2018 Vietnam" style="width:100px; height:100px; object-fit:cover; border-radius:6px; vertical-align:middle; margin-right:8px;">
-            <a href="https://blog.naver.com/hobin1019/221204473349" target="_blank" rel="noopener">2018 - Vietnam</a>
-          </li>
-          <li>
-            <img src="/assets/travel/2015-japan.jpg" alt="2015 Japan" style="width:100px; height:100px; object-fit:cover; border-radius:6px; vertical-align:middle; margin-right:8px;">
-            2015 - Japan
-          </li>
-        </ul>
-      </article>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <section>
+      <h1>Miles & Memories</h1>
+      <div class="gallery">
+        <a class="gallery-item" href="https://blog.naver.com/hobin1019/223914835167" target="_blank" rel="noopener">
+          <img src="/assets/travel/2025-europe.jpg" alt="2025 Western Europe">
+          <span>2025 - Western Europe</span>
+        </a>
+        <div class="gallery-item">
+          <img src="/assets/travel/2024-japan.jpg" alt="2024 Japan">
+          <span>2024 - Japan</span>
+        </div>
+        <a class="gallery-item" href="https://blog.naver.com/hobin1019/223371049772" target="_blank" rel="noopener">
+          <img src="/assets/travel/2024-taiwan.jpg" alt="2024 Taiwan">
+          <span>2024 - Taiwan</span>
+        </a>
+        <a class="gallery-item" href="https://blog.naver.com/hobin1019/221549852954" target="_blank" rel="noopener">
+          <img src="/assets/travel/2019-hongkong.jpg" alt="2019 HongKong">
+          <span>2019 - HongKong</span>
+        </a>
+        <a class="gallery-item" href="https://blog.naver.com/hobin1019/221204473349" target="_blank" rel="noopener">
+          <img src="/assets/travel/2018-vietnam.jpg" alt="2018 Vietnam">
+          <span>2018 - Vietnam</span>
+        </a>
+        <div class="gallery-item">
+          <img src="/assets/travel/2015-japan.jpg" alt="2015 Japan">
+          <span>2015 - Japan</span>
+        </div>
+      </div>
+      <div id="map"></div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> hobin han. All rights reserved.</p>
+      <p>© <span id="year"></span> hobin. All rights reserved.</p>
     </div>
   </footer>
 </body>
