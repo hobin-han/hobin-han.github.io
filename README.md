@@ -1,3 +1,6 @@
-# hobin — iOS Developer
+# Hobin Han — iOS Developer
 
-https://hobin-han.github.io/
+### Feel free to check out my links below 👇
+
+🌐 [Website](https://hobin-han.github.io/)
+💼 [LinkedIn](https://www.linkedin.com/in/hobin1019)
