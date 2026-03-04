@@ -4,171 +4,424 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>hobin — iOS Developer</title>
-  <meta name="description" content="Personal site and portfolio. Built with vanilla HTML/CSS/JS and deployed on GitHub Pages.">
+  <meta name="description" content="Hobin Han — iOS Developer with 6+ years of experience building Swift apps at Kakao Entertainment. Portfolio featuring SwiftAVPlayer, SlotMachineAnimator, and more.">
   <meta property="og:title" content="hobin — iOS Developer">
-  <meta property="og:description" content="Personal site and portfolio. Built with vanilla HTML/CSS/JS and deployed on GitHub Pages.">
+  <meta property="og:description" content="iOS Developer building apps with Swift, UIKit, and SwiftUI. 6+ years experience at Kakao Entertainment.">
   <meta property="og:url" content="https://hobin-han.github.io/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/assets/icons/favicon.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="js/main.js" defer></script>
+  <script type="module" src="/js/main.js"></script>
 </head>
 <body>
-  <header class="site-header container">
-    <a class="logo" href="/">👩🏻‍💻 hobin-han</a>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Hello, I'm Hobin 👋</h1>
-      <p>I’m an iOS Developer constantly learning, improving, and sharing what I’ve learned along the way.</p>
-      <p class="cta-row">
-        <a class="btn" href="mailto:hobin1019@gmail.com">@Contact me</a>
+  <!-- NAVIGATION -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner container">
+      <a class="logo" href="/">hobin-han</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#travel">Travel</a></li>
+      </ul>
+      <a class="btn btn-nav" href="mailto:hobin1019@gmail.com">Contact</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="hero-greeting">Hello, I'm Hobin 👋</p>
+      <h1 class="hero-title">
+        <span id="typewriter"></span><span class="cursor" aria-hidden="true">|</span>
+      </h1>
+      <p class="hero-sub">Building apps people love with Swift, UIKit, and SwiftUI — 6+ years at top Korean tech companies.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:hobin1019@gmail.com">Contact me</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/hobin1019" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn ghost" href="https://github.com/hobin-han" target="_blank" rel="noopener">GitHub</a>
         <a class="btn ghost" href="https://calendly.com/hobin1019/30min" target="_blank" rel="noopener">☕ Coffee Chat</a>
-      </p>
-    </section>
+      </div>
+      <a class="scroll-down" href="#about" aria-label="Scroll to About section">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M7 10l5 5 5-5"/>
+        </svg>
+      </a>
+    </div>
+  </section>
 
-    <h2>Side Projects</h2>
-    <section class="grid">
-      <article class="card">
-        <h2>SwiftAVPlayer</h2>
-        <a href="https://github.com/hobin-han/SwiftAVPlayer" target="_blank" rel="noopener">hobin-han/SwiftAVPlayer</a>
-        <p>A comprehensive iOS media player built with Swift and AVFoundation, featuring playback controls (play/pause/seek/skip/rewind), real-time progress tracking, and variable playback speed, with Combine-based state management.</p>
-        <video controls width="100%" style="margin-top: 1rem;" preload="metadata">
-          <source src="assets/videos/SwiftAVPlayer.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag.</p>
-        </video>
-      </article>
-      <article class="card">
-        <h2>SlotMachineAnimator</h2>
-        <a href="https://github.com/hobin-han/SlotMachineAnimator" target="_blank" rel="noopener">hobin-han/SlotMachineAnimator</a>
-        <p>A lightweight UIKit-based slot machine animator for iOS with precise, customizable spin-to-index control.</p>
-          <video controls width="100%" style="margin-top: 1rem;" preload="metadata">
-            <source src="assets/videos/SlotMachineAnimator.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag.</p>
-          </video>
-      </article>
-      <article class="card">
-        <h2>Sendable-Concurrency</h2>
-        <a href="https://github.com/hobin-han/Sendable-Concurrency" target="_blank" rel="noopener">hobin-han/Sendable-Concurrency</a>
-        <p>Sendable-Concurrency is a Swift project that explores the Sendable protocol and structured concurrency for writing safe, concurrent code.</p>
-      </article>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm a Seoul-based iOS developer with <strong>6+ years</strong> of experience building and scaling consumer-facing apps at top Korean tech companies. I care deeply about performance, clean architecture, and delightful user experiences.</p>
+          <p>Currently building <strong>KakaoPage, Tapas, and KakaoWebtoon</strong> at Kakao Entertainment — apps used by millions across Asia and the US.</p>
+          <p>Outside of work, I explore new technologies through open source side projects and write technical articles on Medium.</p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years iOS</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="2">0</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">App Store Apps</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Open Source Libs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>Tech Blog</h2>
-    <section class="grid">
-      <article class="card">
-        <h2>Latest Posts (2025 ~)</h2>
-        <p>(written in English)</p>
-        <a href="https://medium.com/@hobin1019" target="_blank" rel="noopener">Medium</a>
-        <ul>
-          <li><a href="https://medium.com/@hobin1019/make-your-own-publisher-subscription-subscriber-step-by-step-2087632c7f51">[Combine] Custom Publisher, Subscription, Subscriber</a></li>
-          <li><a href="https://medium.com/@hobin1019/swift-generics-explained-simply-with-examples-i-wish-i-knew-sooner-03ee08e19ddf">[Swift] Generics</a></li>
-          <li><a href="https://medium.com/@hobin1019/understanding-the-trait-collection-in-ios-and-the-issue-i-faced-with-a-solution-e4d2858d19e0">[Swift] Trait Collection Issue I Faced with a Solution</a></li>
-        </ul>
-      </article>
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="category-title">iOS Code</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="100">Swift<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="100">UIKit<span class="skill-bar"></span></span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="category-title">iOS UI</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="90">SwiftUI<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="95">AVFoundation<span class="skill-bar"></span></span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="category-title">Concurrency</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="95">Combine<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="85">Swift Concurrency<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="70">RxSwift<span class="skill-bar"></span></span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="category-title">Cross-Platform</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="65">React Native<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="60">JavaScript<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="50">Python<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="30">Ruby<span class="skill-bar"></span></span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="category-title">Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="100">Git<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="80">Firebase<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="100">Xcode<span class="skill-bar"></span></span>
+            <span class="skill-tag" data-level="90">JIRA<span class="skill-bar"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <article class="card">
-        <h2>(2016 ~ 2024)</h2>
-        <p>(written in Korean)</p>
-        <a href="https://red-cherry-ring.tistory.com/" target="_blank" rel="noopener">Tistory</a> | <a href="https://blog.naver.com/hobin1019/222038369211" target="_blank" rel="noopener">Naver Blog</a>
-        <ul>
-          <li><a href="https://red-cherry-ring.tistory.com/32" target="_blank" rel="noopener">[SwiftUI] Managing Model Data</a></li>
-          <li><a href="https://red-cherry-ring.tistory.com/12" target="_blank" rel="noopener">[Apple] Certificates</a></li>
-          <li><a href="https://red-cherry-ring.tistory.com/14" target="_blank" rel="noopener">[Swift] MRC vs ARC</a></li>
-          <li><a href="https://blog.naver.com/hobin1019/221616197346" target="_blank" rel="noopener">[Swift] MVC vs MVVM</a></li>
-        </ul>
-      </article>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="projects-grid">
 
-    <h2>Professional Experience</h2>
-    <section class="grid">
-      <article class="card">
-      <h3>Kakao Entertainment <span class="role">— iOS Developer (2020 ~ Present)</span></h3>
-      <p>We create and deliver webtoons and novels to audiences worldwide.</p>
-      <p>Swift, Combine, AVPlayer, JavaScript, Ruby, SwiftUI, Swift Concurrency, Firebase Crashlytics, VisionOS, Google Apps Script, Python, RxSwift, Git, JSON, REST API, Agile, JIRA, Confluence, Zeplin, Figma, MVVM, Code Review</p>
-      <ul>
-        <li>
-          <a href="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4%EC%A7%80/id616643813/" target="_blank" rel="noopener">
-            KakaoPage App
-          </a> 
-          ( <a href="https://page.kakao.com" target="_blank" rel="noopener">Web</a> )
-          , 
-          <a href="https://apps.apple.com/us/app/tapas-comics-and-novels/id578836126/" target="_blank" rel="noopener">
-            Tapas App
-          </a> 
-          ( <a href="https://tapas.io" target="_blank" rel="noopener">Web</a> )
-          , 
-          <a href="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%EC%9B%B9%ED%88%B0-kakao-webtoon/id736602666/" target="_blank" rel="noopener">
-            KakaoWebtoon App
-          </a> 
-          ( <a href="https://webtoon.kakao.com" target="_blank" rel="noopener">Web</a> )
-        </li>
-        <li>Automated repetitive data conversion with a custom script, improving speed and efficiency.</li>
-        <li>Refactored core logic with zero regressions.</li>
-        <li>Authored and shared 8+ technical documents on iOS development.</li>
-        <li>Built and released an iOS Ad Framework, adopted by Melon, KakaoWebtoon, and KakaoPage.</li>
-        <li>Improved AVPlayer performance by 40% through optimization.</li>
-        <li>Led VisionOS prototype project and attended Apple Lab Sessions.</li>
-        <li>Supported global app launch in Taiwan, Thailand, and Indonesia.</li>
-        <li>Developed 7 standalone pages and a slot-machine animation feature.</li>
-        <li>Collaborated with cross-functional teams under agile sprints.</li>
-      </ul>
+        <!-- SwiftAVPlayer -->
+        <article class="project-card reveal">
+          <div class="project-header gradient-1">
+            <div class="project-icon">▶</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">SwiftAVPlayer</h3>
+            <div class="project-tags">
+              <span class="tag">Swift</span>
+              <span class="tag">AVFoundation</span>
+              <span class="tag">Combine</span>
+              <span class="tag">UIKit</span>
+            </div>
+            <p class="project-desc">A comprehensive iOS media player with playback controls, real-time progress tracking, variable speed, and Combine-based state management.</p>
+            <div class="project-actions">
+              <button class="btn-demo">▶ Watch Demo</button>
+              <a class="btn ghost btn-sm" href="https://github.com/hobin-han/SwiftAVPlayer" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="video-wrapper">
+              <video controls width="100%" preload="metadata">
+                <source src="assets/videos/SwiftAVPlayer.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </article>
 
-      <h3>FnGuide <span class="role">— iOS Developer (2018 ~ 2020)</span></h3>
-      <p>We provide companies with stock data and financial reports.</p>
-      <p>Swift, Objective-C, React Native, Android, Java, Kotlin, Backend, C#, ASP.NET, Node.js, REST API, Oracle DB, MSSQL, MySQL, FCM, GCP, API Integration, Alamofire, Zeplin, Mobile Auth</p>
-      <ul>
-        <li>Managed full app lifecycle—feature planning, development, database management, customer support, and App Store deployments.</li>
-        <li>Supported Android, React Native, backend (C#, ASP.NET), and database operations (MSSQL, Oracle, MySQL).</li>
-        <li>Independently handled certificate renewals, internal releases, and executive-level technical presentations.</li>
-        <li>Built internal management apps that replaced manual SMS alerts with push notifications, streamlining company communication.</li>
-      </ul>
-      </article>
-    </section>
+        <!-- SlotMachineAnimator -->
+        <article class="project-card reveal">
+          <div class="project-header gradient-2">
+            <div class="project-icon">🎰</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">SlotMachineAnimator</h3>
+            <div class="project-tags">
+              <span class="tag">Swift</span>
+              <span class="tag">UIKit</span>
+              <span class="tag">Core Animation</span>
+            </div>
+            <p class="project-desc">A lightweight UIKit-based slot machine animator for iOS with precise, customizable spin-to-index control.</p>
+            <div class="project-actions">
+              <button class="btn-demo">▶ Watch Demo</button>
+              <a class="btn ghost btn-sm" href="https://github.com/hobin-han/SlotMachineAnimator" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="video-wrapper">
+              <video controls width="100%" preload="metadata">
+                <source src="assets/videos/SlotMachineAnimator.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </article>
 
-    <section>
-      <h1>Miles & Memories</h1>
-      <div class="gallery">
+        <!-- Sendable-Concurrency -->
+        <article class="project-card reveal">
+          <div class="project-header gradient-3">
+            <div class="project-icon">⚡</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Sendable-Concurrency</h3>
+            <div class="project-tags">
+              <span class="tag">Swift</span>
+              <span class="tag">Swift Concurrency</span>
+              <span class="tag">Sendable</span>
+            </div>
+            <p class="project-desc">Explores the Sendable protocol and structured concurrency for writing safe, concurrent Swift code in real-world scenarios.</p>
+            <div class="project-actions">
+              <a class="btn ghost btn-sm" href="https://github.com/hobin-han/Sendable-Concurrency" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="timeline">
+
+        <!-- Kakao Entertainment -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-header">
+              <h3 class="timeline-company">Kakao Entertainment</h3>
+              <span class="timeline-role">iOS Developer</span>
+              <span class="timeline-period">2020 — Present</span>
+            </div>
+            <p class="timeline-desc">Building webtoon and novel apps for global audiences across Asia and the US.</p>
+            <div class="app-chips">
+              <a class="chip" href="https://apps.apple.com/kr/app/id616643813/" target="_blank" rel="noopener">KakaoPage</a>
+              <a class="chip" href="https://apps.apple.com/us/app/id578836126/" target="_blank" rel="noopener">Tapas</a>
+              <a class="chip" href="https://apps.apple.com/kr/app/id736602666/" target="_blank" rel="noopener">KakaoWebtoon</a>
+            </div>
+            <ul class="timeline-achievements">
+              <li>Improved AVPlayer performance by <strong>40%</strong> through deep optimization</li>
+              <li>Built iOS Ad Framework, adopted by Melon, KakaoWebtoon, and KakaoPage</li>
+              <li>Led VisionOS prototype project and attended Apple Lab Sessions</li>
+              <li>Supported global app launch (Taiwan, Thailand, Indonesia)</li>
+              <li>Authored 8+ technical documents on iOS development</li>
+              <li>Developed 7 standalone pages and a slot-machine animation feature</li>
+            </ul>
+            <div class="tech-pills">
+              <span class="pill">Swift</span>
+              <span class="pill">Combine</span>
+              <span class="pill">AVPlayer</span>
+              <span class="pill">SwiftUI</span>
+              <span class="pill">Swift Concurrency</span>
+              <span class="pill">RxSwift</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">VisionOS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FnGuide -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-header">
+              <h3 class="timeline-company">FnGuide</h3>
+              <span class="timeline-role">iOS Developer</span>
+              <span class="timeline-period">2018 — 2020</span>
+            </div>
+            <p class="timeline-desc">Financial data and stock app development for enterprise clients.</p>
+            <ul class="timeline-achievements">
+              <li>Managed full app lifecycle — planning, development, database, App Store deployments</li>
+              <li>Supported iOS, Android, React Native, and backend (C#, ASP.NET)</li>
+              <li>Built internal apps that replaced manual SMS alerts with push notifications</li>
+              <li>Independently handled certificate renewals and executive-level tech presentations</li>
+            </ul>
+            <div class="tech-pills">
+              <span class="pill">Swift</span>
+              <span class="pill">Objective-C</span>
+              <span class="pill">React Native</span>
+              <span class="pill">C#</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Oracle DB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Blog</h2>
+      <div class="blog-tabs reveal">
+        <button class="tab-btn active" data-tab="en">English</button>
+        <button class="tab-btn" data-tab="ko">한국어</button>
+      </div>
+
+      <div class="tab-content" id="tab-en">
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <span class="blog-category">Combine</span>
+            <h3 class="blog-title">
+              <a href="https://medium.com/@hobin1019/make-your-own-publisher-subscription-subscriber-step-by-step-2087632c7f51" target="_blank" rel="noopener">
+                Custom Publisher, Subscription, Subscriber
+              </a>
+            </h3>
+            <span class="blog-link">Read on Medium →</span>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-category">Swift</span>
+            <h3 class="blog-title">
+              <a href="https://medium.com/@hobin1019/swift-generics-explained-simply-with-examples-i-wish-i-knew-sooner-03ee08e19ddf" target="_blank" rel="noopener">
+                Generics Explained Simply
+              </a>
+            </h3>
+            <span class="blog-link">Read on Medium →</span>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-category">Swift</span>
+            <h3 class="blog-title">
+              <a href="https://medium.com/@hobin1019/understanding-the-trait-collection-in-ios-and-the-issue-i-faced-with-a-solution-e4d2858d19e0" target="_blank" rel="noopener">
+                Trait Collection: Issue I Faced with a Solution
+              </a>
+            </h3>
+            <span class="blog-link">Read on Medium →</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="tab-ko">
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <span class="blog-category">SwiftUI</span>
+            <h3 class="blog-title">
+              <a href="https://red-cherry-ring.tistory.com/32" target="_blank" rel="noopener">
+                [SwiftUI] Managing Model Data
+              </a>
+            </h3>
+            <span class="blog-link">Read on Tistory →</span>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-category">Apple</span>
+            <h3 class="blog-title">
+              <a href="https://red-cherry-ring.tistory.com/12" target="_blank" rel="noopener">
+                [Apple] Certificates
+              </a>
+            </h3>
+            <span class="blog-link">Read on Tistory →</span>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-category">Swift</span>
+            <h3 class="blog-title">
+              <a href="https://red-cherry-ring.tistory.com/14" target="_blank" rel="noopener">
+                [Swift] MRC vs ARC
+              </a>
+            </h3>
+            <span class="blog-link">Read on Tistory →</span>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-category">Architecture</span>
+            <h3 class="blog-title">
+              <a href="https://blog.naver.com/hobin1019/221616197346" target="_blank" rel="noopener">
+                [Swift] MVC vs MVVM
+              </a>
+            </h3>
+            <span class="blog-link">Read on Naver →</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVEL -->
+  <section id="travel" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Miles &amp; Memories</h2>
+      <div class="gallery reveal">
         <a class="gallery-item" href="https://blog.naver.com/hobin1019/223914835167" target="_blank" rel="noopener">
-          <img src="/assets/travel/2025-europe.jpg" alt="2025 Western Europe">
-          <span>2025 - Western Europe</span>
+          <img src="/assets/travel/2025-europe.jpg" alt="2025 Western Europe" loading="lazy">
+          <div class="gallery-overlay"><span>2025 · Western Europe</span></div>
         </a>
         <div class="gallery-item">
-          <img src="/assets/travel/2024-japan.jpg" alt="2024 Japan">
-          <span>2024 - Japan</span>
+          <img src="/assets/travel/2024-japan.jpg" alt="2024 Japan" loading="lazy">
+          <div class="gallery-overlay"><span>2024 · Japan</span></div>
         </div>
         <a class="gallery-item" href="https://blog.naver.com/hobin1019/223371049772" target="_blank" rel="noopener">
-          <img src="/assets/travel/2024-taiwan.jpg" alt="2024 Taiwan">
-          <span>2024 - Taiwan</span>
+          <img src="/assets/travel/2024-taiwan.jpg" alt="2024 Taiwan" loading="lazy">
+          <div class="gallery-overlay"><span>2024 · Taiwan</span></div>
         </a>
         <a class="gallery-item" href="https://blog.naver.com/hobin1019/221549852954" target="_blank" rel="noopener">
-          <img src="/assets/travel/2019-hongkong.jpg" alt="2019 HongKong">
-          <span>2019 - Hong Kong</span>
+          <img src="/assets/travel/2019-hongkong.jpg" alt="2019 Hong Kong" loading="lazy">
+          <div class="gallery-overlay"><span>2019 · Hong Kong</span></div>
         </a>
         <a class="gallery-item" href="https://blog.naver.com/hobin1019/221204473349" target="_blank" rel="noopener">
-          <img src="/assets/travel/2018-vietnam.jpg" alt="2018 Vietnam">
-          <span>2018 - Vietnam</span>
+          <img src="/assets/travel/2018-vietnam.jpg" alt="2018 Vietnam" loading="lazy">
+          <div class="gallery-overlay"><span>2018 · Vietnam</span></div>
         </a>
         <div class="gallery-item">
-          <img src="/assets/travel/2015-japan.jpg" alt="2015 Japan">
-          <span>2015 - Japan</span>
+          <img src="/assets/travel/2015-japan.jpg" alt="2015 Japan" loading="lazy">
+          <div class="gallery-overlay"><span>2015 · Japan</span></div>
         </div>
       </div>
       <div id="map"></div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> hobin. All rights reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
