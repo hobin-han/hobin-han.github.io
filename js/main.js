@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (statEl) statEl.dataset.target = yrs;
   document.querySelectorAll('#career-years, #career-years-about').forEach(el => el.textContent = yrs);
 
+  // Meta description (dynamic)
+  const descContent = `Hobin Han — iOS Developer with ${yrs}+ years of experience. Currently at Kakao Entertainment. Passionate about code quality, team communication, and continuous improvement.`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = descContent;
+  const metaOgDesc = document.querySelector('meta[property="og:description"]');
+  if (metaOgDesc) metaOgDesc.content = descContent;
+
   initNav();
   initHero();
   initCounters();

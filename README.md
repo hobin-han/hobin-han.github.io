@@ -8,6 +8,13 @@
 
 <br/>
 
+## External Dependencies
+
+| Resource | Source | Usage |
+|---|---|---|
+| [Inter](https://fonts.google.com/specimen/Inter) | Google Fonts (CDN) | Site-wide typography |
+| [Leaflet.js](https://leafletjs.com/) | unpkg.com (CDN) | Travel section map |
+
 ## Local HTML Server (Test Guide)
 
 ### Run with Python
