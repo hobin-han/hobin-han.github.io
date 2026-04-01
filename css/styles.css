@@ -260,13 +260,14 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: stretch;
 }
 .about-text p { color: var(--muted); }
 .about-text strong { color: var(--fg); }
 .about-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
   gap: 16px;
 }
 .stat-card {
@@ -277,9 +278,11 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   box-shadow: var(--shadow-sm);
 }
+.stat-number-row { display: flex; align-items: center; }
 .stat-num {
   font-size: 2.5rem;
   font-weight: 800;
