@@ -52,7 +52,7 @@ p { margin: 0 0 1rem; }
 }
 
 /* ===== 4. LAYOUT UTILITIES ===== */
-.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 .section { padding: var(--section-gap) 0; }
 .section-alt { background: rgba(255,255,255,0.02); }
 
